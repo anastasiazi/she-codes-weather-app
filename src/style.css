@@ -1,0 +1,49 @@
+.main-city {
+    font-size: 42px;
+}
+
+.circle {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.main-pic {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.sunny {
+    background-color: #fdf89d;
+}
+
+.partly-cloudy {
+    background-color: #e5e5e5;
+}
+
+.cloudy {
+    background-color: #b9b9b9
+}
+
+#temperature {
+    font-size: 60px;
+    line-height: 40px;
+    transition: all .2s ease-in;
+}
+
+.degree {
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.degree:hover{
+    font-weight: bold;
+}
+
+.active {
+    font-weight: bold;
+}

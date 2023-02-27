@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+	      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+	<link rel="stylesheet" href="src/style.css">
+	<title>Weather App - week2</title>
+</head>
+<body>
+	<div class="container my-3 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+		<div class="row">
+			<div class="col-3 text-secondary">
+				<div class="row">
+					<div class="col-4 fw-bold">
+						<span id="current-day">Feb 21</span>
+					</div>
+					<div class="col">
+						<span id="current-time">Saturdday 12:00</span>
+					</div>
+				</div>
+				<div class="row">
+					<span class="main-city">Charlotte</span>
+				</div>
+				<div class="row">
+					<span class="main-condition">Sunny</span>
+				</div>
+			</div>
+			<div class="col-3"></div>
+			<div class="col-6">
+				<div class="row fw-bold text-secondary">
+					<div class="d-flex justify-content-between">
+						<div class="">Charlotte</div>
+						<div class="">New York</div>
+						<div class="">Los Angeles</div>
+						<div class="">Kyiv</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-group my-3">
+						<input type="text" class="form-control" placeholder="Enter a city" aria-label="Recipient's username"
+						       aria-describedby="basic-addon2" id="search-input">
+						<button class="btn btn-secondary mx-3" id="basic-addon2">Search</button>
+						<button class="btn btn-success" id="current-location">Current Location</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row my-3">
+			<div class="col-3">
+				<div class="circle sunny main-pic"></div>
+			</div>
+			<div class="col-2 fs-3">
+				<div class="d-flex flex-row my-3 justify-content-between">
+					<div class="fw-bold" id="temperature"></div>
+					<div id="fahrenheit" class="degree text-muted">°F</div>
+					<div> |</div>
+					<div id="celsius" class="degree active">°C</div>
+				</div>
+				<div class="row my-3">
+					<div class="d-flex flex-row justify-content-between text-muted">
+						<div>H: 57°F</div>
+						<div>L: 42°F</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="row text-muted">
+					<div class="d-flex justify-content-end">
+						<div class="col text-end my-3">
+							<span>Humidity: 42%</span>
+						</div>
+					</div>
+					<div class="d-flex justify-content-end">
+						<div class="col text-end my-3">
+							<span>Wind: 12 mph</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="row text-muted">
+					<div class="d-flex justify-content-end">
+						<div class="col text-end my-3">
+							<span>Precipitation: 0"</span>
+						</div>
+					</div>
+					<div class="d-flex justify-content-end">
+						<div class="col text-end my-3">
+							<span>Feels like: 52°F</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row my-3"></div>
+		<div class="row my-3 text-secondary fw-bold">
+			<div class="col-3"></div>
+			<div class="col-9">
+				<div class="row">
+					<div class="d-flex justify-content-between text-center">
+						<div class="d-flex flex-column">
+							<span>Sun</span>
+							<div class="circle cloudy"></div>
+							<span>41 °F</span>
+						</div>
+						<div class="d-flex flex-column">
+							<span>Mon</span>
+							<div class="circle sunny"></div>
+							<span>63 °F</span>
+						</div>
+						<div class="d-flex flex-column">
+							<span>Tue</span>
+							<div class="circle partly-cloudy"></div>
+							<span>53 °F</span>
+						</div>
+						<div class="d-flex flex-column">
+							<span>Wed</span>
+							<div class="circle sunny"></div>
+							<span>57 °F</span>
+						</div>
+						<div class="d-flex flex-column">
+							<span>Thu</span>
+							<div class="circle cloudy"></div>
+							<span>62 °F</span>
+						</div>
+						<div class="d-flex flex-column">
+							<span>Fri</span>
+							<div class="circle partly-cloudy"></div>
+							<span>55 °F</span>
+						</div>
+						<div class="d-flex flex-column">
+							<span>Sat</span>
+							<div class="circle partly-cloudy"></div>
+							<span>50 °F</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script
+			src="src/index.js"></script>
+</body>
+</html>
